@@ -72,7 +72,11 @@
 # 5-й день: 2,93
 # 6-й день: 3,22
 # Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
-first_day = int(input(f'Введите пробег в км за первый день: '))
-target = int(input(f'Введите целевой пробег в км за день: '))
-counter_day =
-
+# first_day = int(input(f'Введите пробег в км за первый день: '))
+# target = int(input(f'Введите целевой пробег в км за день: '))
+# counter_day = 1
+# while first_day < target:
+#     print(f'{counter_day}-й день: {round(first_day, 1)} км')
+#     first_day = first_day + (first_day * 0.1)
+#     counter_day +=1
+# print(f'На {counter_day}-й день спортсмен достиг результата - не менее {target} км.')
