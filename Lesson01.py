@@ -1,63 +1,63 @@
 # 1. Поработайте с переменными, создайте несколько, выведите на экран,
 # запросите у пользователя несколько чисел и строк и сохраните в переменные,
 # выведите на экран.
-# n = 0
-# list = []
-# counter = int(input(f'Введите кол-во переменных: '))
-# while n <= counter - 1:
-#     var = input(f'Введите значение {n + 1} переменной: ')
-#     print(f'{n + 1} переменная: {var}')
-#     list.insert(n, var)
-#     # print(list[n])
-#     n += 1
+n = 0
+list = []
+counter = int(input(f'Введите кол-во переменных: '))
+while n <= counter - 1:
+    var = input(f'Введите значение {n + 1} переменной: ')
+    print(f'{n + 1} переменная: {var}')
+    list.insert(n, var)
+    # print(list[n])
+    n += 1
 
 # 2. Пользователь вводит время в секундах.
 # Переведите время в часы, минуты и секунды и выведите в формате чч:мм:сс.
 # Используйте форматирование строк.
-# time_counter = int(input(f'Введите кол-во секунд: '))
-# hour = time_counter // 3600
-# min = (time_counter % 3600) // 60
-# sec = time_counter % 60
-# print(f'{hour}:{min}:{sec}')
+time_counter = int(input(f'Введите кол-во секунд: '))
+hour = time_counter // 3600
+min = (time_counter % 3600) // 60
+sec = time_counter % 60
+print(f'{hour}:{min}:{sec}')
 
 # 3. Узнайте у пользователя число n. Найдите сумму чисел n + nn + nnn.
 # Например, пользователь ввёл число 3. Считаем 3 + 33 + 333 = 369
-# number = input(f'Введите число от 1 до 9: ')
-# num2 = (number * 2)
-# #print(num2)
-# num3 = (number * 3)
-# #print(num3)
-# print(f'Сумма {number} + {num2} + {num3} = {int(number) + int(num2) + int(num3)}')
+number = input(f'Введите число от 1 до 9: ')
+num2 = (number * 2)
+#print(num2)
+num3 = (number * 3)
+#print(num3)
+print(f'Сумма {number} + {num2} + {num3} = {int(number) + int(num2) + int(num3)}')
 
 # 4. Пользователь вводит целое положительное число. Найдите самую большую цифру в числе.
 # Для решения используйте цикл while и арифметические операции.
-# counter_input = input(f'Введите целое положительное число: ')
-# length = len(counter_input)
-# biggest = counter_input[0]
-# counter_array = 0
-# while length > int(counter_array):
-#     if int(counter_input[counter_array]) > int(biggest):
-#         biggest = counter_input[counter_array]
-#         counter_array +=1
-#     else:
-#         counter_array +=1
-#         continue
-# print(f'Наибольшая цифра: {biggest}')
+counter_input = input(f'Введите целое положительное число: ')
+length = len(counter_input)
+biggest = counter_input[0]
+counter_array = 0
+while length > int(counter_array):
+    if int(counter_input[counter_array]) > int(biggest):
+        biggest = counter_input[counter_array]
+        counter_array +=1
+    else:
+        counter_array +=1
+        continue
+print(f'Наибольшая цифра: {biggest}')
 
 # 5. Запросите у пользователя значения выручки и издержек фирмы.
 # Определите, с каким финансовым результатом работает фирма (прибыль — выручка больше издержек, или убыток — издержки больше выручки).
 # Выведите соответствующее сообщение.
 # Если фирма отработала с прибылью, вычислите рентабельность выручки (соотношение прибыли к выручке).
 # Далее запросите численность сотрудников фирмы и определите прибыль фирмы в расчете на одного сотрудника.
-# prihod = int(input(f'Введите значение выручки (целое положительное число): '))
-# rashod = int(input(f'Введите значение издержек (целое положительное число): '))
-# if prihod > rashod:
-#     rent = (prihod - rashod) / prihod
-#     print(f'Ваша фирма работает с прибылью. Рентабельность составляет: {round(rent, 3)} ')
-#     emp = int(input(f'Введите кол-во сотрудников фирмы: '))
-#     print(f'На каждого сотрудника приходится {round(((prihod - rashod) / emp), 3)} едениц прибыли')
-# else:
-#     print(f'Ваша фирма работает с убытком')
+prihod = int(input(f'Введите значение выручки (целое положительное число): '))
+rashod = int(input(f'Введите значение издержек (целое положительное число): '))
+if prihod > rashod:
+    rent = (prihod - rashod) / prihod
+    print(f'Ваша фирма работает с прибылью. Рентабельность составляет: {round(rent, 3)} ')
+    emp = int(input(f'Введите кол-во сотрудников фирмы: '))
+    print(f'На каждого сотрудника приходится {round(((prihod - rashod) / emp), 3)} едениц прибыли')
+else:
+    print(f'Ваша фирма работает с убытком')
 
 # 6. Спортсмен занимается ежедневными пробежками. В первый день его результат составил a километров.
 # Каждый день спортсмен увеличивал результат на 10 % относительно предыдущего.
@@ -72,11 +72,11 @@
 # 5-й день: 2,93
 # 6-й день: 3,22
 # Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
-# first_day = int(input(f'Введите пробег в км за первый день: '))
-# target = int(input(f'Введите целевой пробег в км за день: '))
-# counter_day = 1
-# while first_day < target:
-#     print(f'{counter_day}-й день: {round(first_day, 1)} км')
-#     first_day = first_day + (first_day * 0.1)
-#     counter_day +=1
-# print(f'На {counter_day}-й день спортсмен достиг результата - не менее {target} км.')
+first_day = int(input(f'Введите пробег в км за первый день: '))
+target = int(input(f'Введите целевой пробег в км за день: '))
+counter_day = 1
+while first_day < target:
+    print(f'{counter_day}-й день: {round(first_day, 1)} км')
+    first_day = first_day + (first_day * 0.1)
+    counter_day +=1
+print(f'На {counter_day}-й день спортсмен достиг результата - не менее {target} км.')
