@@ -19,18 +19,18 @@ n = 0
 list = []
 counter = int(input(f'Введите кол-во элементов списка: '))
 while n <= counter - 1:
-        var = input(f'Введите значение элемента {n + 1}: ')
-        list.insert(n, var)
-        n += 1
+    var = input(f'Введите значение элемента {n + 1}: ')
+    list.insert(n, var)
+    n += 1
 print(f'Список до изменения:')
 print(list)
 n = 0
 while n + 1 < counter:
-        tmp1 = list[n]
-        tmp2 = list[n+1]
-        list[n] = tmp2
-        list[n+1] = tmp1
-        n += 2
+    tmp1 = list[n]
+    tmp2 = list[n + 1]
+    list[n] = tmp2
+    list[n + 1] = tmp1
+    n += 2
 print(f'Список после изменения:')
 print(list)
 
@@ -38,7 +38,7 @@ print(list)
 # Напишите решения через list и через dict.
 month = int(input(f'Введите месяц года в числовом виде: '))
 month_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-month_dict = {'зима':(1,2,12), 'весна':(3,4,5), 'лето':(6,7,8), 'осень':(9,10,11)}
+month_dict = {'зима': (1, 2, 12), 'весна': (3, 4, 5), 'лето': (6, 7, 8), 'осень': (9, 10, 11)}
 index_list = month_list.index(month)
 print(f'Позиция в {month_list}: {index_list}')
 if 2 <= index_list <= 5:
@@ -87,8 +87,8 @@ for el in string.split():
 # print(f'Список после сортровки: {splited_list}')
 splited_list = [12, 12, 10, 6, 6, 4]
 var = int(input(f'Введите новый элемент рейтинга: '))
-#print(splited_list.count(var))
-for ind,el in enumerate(splited_list):
+# print(splited_list.count(var))
+for ind, el in enumerate(splited_list):
     print(f'{ind}: {el}')
     if var <= el:
         if ind == len(splited_list) - 1:
