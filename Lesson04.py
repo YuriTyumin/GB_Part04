@@ -1,44 +1,53 @@
 # 1. Реализовать скрипт, в котором должна быть предусмотрена функция расчета заработной платы сотрудника.
 # В расчете необходимо использовать формулу: (выработка в часах*ставка в час) + премия.
 # Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами.
+# from sys import argv
+# script_name, hours, hourly_rate, prem = argv
+# #print("Имя скрипта: ", script_name)
+# print(f'Выработка в часах месяц (ср. 21 день): {hours}')
+# print(f'Часовая ставка: {hourly_rate}')
+# print(f'Премия: {prem}')
+# tmp = (int(hours) * int(hourly_rate)) + int(prem)
+# print(f'Зарплата сотрудника в месяц: {tmp - (tmp * 0.13)}')
 
-from sys import argv
-script_name, hours, hourly_rate, prem = argv
-#print("Имя скрипта: ", script_name)
-print(f'Выработка в часах месяц (ср. 21 день): {hours}')
-print(f'Часовая ставка: {hourly_rate}')
-print(f'Премия: {prem}')
-tmp = (int(hours) * int(hourly_rate)) + int(prem)
-print(f'Зарплата сотрудника в месяц: {tmp - (tmp * 0.13)}')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
-#
-#
 # 2. Представлен список чисел. Необходимо вывести элементы исходного списка, значения которых больше предыдущего элемента.
 # Подсказка: элементы, удовлетворяющие условию, оформить в виде списка. Для формирования списка использовать генератор.
 # Пример исходного списка: [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55].
 # Результат: [12, 44, 4, 10, 78, 123].
-#
+from random import randint
+list_num = []
+numb = int(input(f'Введите кол-во элементов в исходном списке: '))
+for i in range(0, numb):
+    list_num.insert(i, randint(0, randint(0, 100)))
+print(f'Исходный список: {list_num}')
+
+total_list = []
+for i in range(0, len(list_num) - 1):
+    if list_num[i+1] > list_num[i]:
+        total_list.append(list_num[i+1])
+        #print(f'Текущее значение: {list_num[i]}, следующее значение: {list_num[i+1]}')
+    else:
+        continue
+print(f'Результирующий список: {total_list}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #
 #
 #
