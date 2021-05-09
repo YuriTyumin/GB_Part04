@@ -26,45 +26,19 @@
 # Пример файла:
 # Иванов 23543.12
 # Петров 13749.32
-with open("Lesson05.3.txt", encoding="utf-8") as stream:
-    tmp = stream.readlines()
-    #print(tmp)
-    dictin = {}
-    summ = 0
-    for x in tmp:
-        lst = x.split()
-        dictin.update([lst])
-        if int(lst[1]) < 20000:
-            print(f'Сотрудник {lst[0]} имеет оклад менее 20тр')
-        summ = summ + int(lst[1])
-    #print(dictin)
-    print(f'Средняя величина доходов сотрудников = {summ // len(tmp)}')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#
-#
+# with open("Lesson05.3.txt", encoding="utf-8") as stream:
+#     tmp = stream.readlines()
+#     #print(tmp)
+#     dictin = {}
+#     summ = 0
+#     for x in tmp:
+#         lst = x.split()
+#         dictin.update([lst])
+#         if int(lst[1]) < 20000:
+#             print(f'Сотрудник {lst[0]} имеет оклад менее 20тр')
+#         summ = summ + int(lst[1])
+#     #print(dictin)
+#     print(f'Средняя величина доходов сотрудников = {summ // len(tmp)}')
 #
 # 4. Создать (не программно) текстовый файл со следующим содержимым:
 # One — 1
@@ -73,6 +47,29 @@ with open("Lesson05.3.txt", encoding="utf-8") as stream:
 # Four — 4
 # Необходимо написать программу, открывающую файл на чтение и считывающую построчно данные.
 # При этом английские числительные должны заменяться на русские. Новый блок строк должен записываться в новый текстовый файл.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #
 #
 #
