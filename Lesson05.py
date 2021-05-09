@@ -8,7 +8,7 @@
 #
 # 2. Создать текстовый файл (не программно), сохранить в нем несколько строк, выполнить подсчет количества строк,
 # количества слов в каждой строке.
-# with open("Lesson05.txt") as stream:
+# with open("Lesson05.2.txt", encoding="utf-8") as stream:
 #     tmp = stream.readlines()
 #     counter = 1
 #     for x in tmp:
@@ -26,6 +26,19 @@
 # Пример файла:
 # Иванов 23543.12
 # Петров 13749.32
+with open("Lesson05.3.txt", encoding="utf-8") as stream:
+    tmp = stream.readlines()
+    #print(tmp)
+    dictin = {}
+    summ = 0
+    for x in tmp:
+        lst = x.split()
+        dictin.update([lst])
+        if int(lst[1]) < 20000:
+            print(f'Сотрудник {lst[0]} имеет оклад менее 20тр')
+        summ = summ + int(lst[1])
+    #print(dictin)
+    print(f'Средняя величина доходов сотрудников = {summ // len(tmp)}')
 
 
 
