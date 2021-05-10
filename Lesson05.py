@@ -67,13 +67,24 @@
 #
 # 5. Создать (программно) текстовый файл, записать в него программно набор чисел, разделенных пробелами.
 # Программа должна подсчитывать сумму чисел в файле и выводить ее на экран.
+from random import randint
 
+with open("Lesson05.5.txt", "w") as file:
+    list_num = []
+    numb = int(input(f'Введите кол-во элементов в исходном списке: '))
+    for i in range(0, numb):
+        list_num.insert(i, randint(0, randint(0, 100)))
+    print(f'Исходный список: {list_num}')
+    for i in list_num:
+        print(i, file=file)
 
-
-
-
-
-
+with open("Lesson05.5.txt") as stream:
+    tmp = stream.readlines()
+    #print(tmp)
+    n = 0
+    for i in range(0, len(tmp)):
+        n = n + int(tmp[i])
+    print(f'Сумма всех чисел в списке: {n}')
 
 
 
