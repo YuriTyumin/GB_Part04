@@ -3,63 +3,84 @@
 # Продолжительность первого состояния (красный) составляет 7 секунд, второго (желтый) — 2 секунды, третьего (зеленый) — на ваше усмотрение.
 # Переключение между режимами должно осуществляться только в указанном порядке (красный, желтый, зеленый).
 # Проверить работу примера, создав экземпляр и вызвав описанный метод.
-import time
-
-
-class TrafficLight:
-    __color: str
-
-    def __init__(self, color):
-        TrafficLight.__color = color
-        print(self.__color)
-
-    def running(self, timer):
-        self.timer = timer
-        time.sleep(self.timer)
-
-
-traffic_light = TrafficLight("Red")
-traffic_light.running(7)
-traffic_light = TrafficLight("Yellow")
-traffic_light.running(2)
-traffic_light = TrafficLight("Green")
-traffic_light.running(5)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# import time
 #
 #
+# class TrafficLight:
+#     __color: str
 #
+#     def __init__(self, color):
+#         TrafficLight.__color = color
+#         print(self.__color)
+#
+#     def running(self, timer):
+#         self.timer = timer
+#         time.sleep(self.timer)
+#
+#
+# traffic_light = TrafficLight("Red")
+# traffic_light.running(7)
+# traffic_light = TrafficLight("Yellow")
+# traffic_light.running(2)
+# traffic_light = TrafficLight("Green")
+# traffic_light.running(5)
+
 # 2. Реализовать класс Road (дорога), в котором определить атрибуты: length (длина), width (ширина).
 # Значения данных атрибутов должны передаваться при создании экземпляра класса. Атрибуты сделать защищенными.
 # Определить метод расчета массы асфальта, необходимого для покрытия всего дорожного полотна.
 # Использовать формулу: длина*ширина*масса асфальта для покрытия одного кв метра дороги асфальтом, толщиной в 1 см*число см толщины полотна.
 # Проверить работу метода.
 # Например: 20м*5000м*25кг*5см = 12500 т
+# class Road:
+#     _length: int
+#     _width: int
+#     depth: int
+#
+#     def __init__(self, length, width, depth):
+#         Road._length = length
+#         Road._width = width
+#         Road.depth = depth
+#         #print(self._length, self._width, self.depth)
+#
+#     def calculate():
+#         total = Road._length * Road._width * Road.depth * 0.025
+#         print(f'{Road._length}м*{Road._width}м*{Road.depth}см*25кг = {total}т')
 #
 #
-#
+# length = int(input(f'Введите длину полотна в метрах: '))
+# width = int(input(f'Введите ширину полотна в метрах: '))
+# depth = int(input(f'Введите толщину полотна в сантиметрах: '))
+# calc = Road(length, width, depth)
+# Road.calculate()
+
 # 3. Реализовать базовый класс Worker (работник), в котором определить атрибуты: name, surname, position (должность), income (доход).
 # Последний атрибут должен быть защищенным и ссылаться на словарь, содержащий элементы:
 # оклад и премия, например, {"wage": wage, "bonus": bonus}. Создать класс Position (должность) на базе класса Worker.
 # В классе Position реализовать методы получения полного имени сотрудника (get_full_name) и дохода с учетом премии (get_total_income).
 # Проверить работу примера на реальных данных (создать экземпляры класса Position, передать данные,
 # проверить значения атрибутов, вызвать методы экземпляров).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #
 #
 #
