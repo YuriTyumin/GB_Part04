@@ -59,57 +59,35 @@
 # В классе Position реализовать методы получения полного имени сотрудника (get_full_name) и дохода с учетом премии (get_total_income).
 # Проверить работу примера на реальных данных (создать экземпляры класса Position, передать данные,
 # проверить значения атрибутов, вызвать методы экземпляров).
-class Worker:
-    name: str
-    surname: str
-    position: str
-    _income: list
-
-    def __init__(self, name, surname, position, income):
-        Worker.name = name
-        Worker.surname = surname
-        Worker.position = position
-        Worker._income = income
-        #print(self.name, self.surname, self.position, self._income)
-
-class Position(Worker):
-    def get_full_name():
-        print(f'Полное имя: {Worker.name} {Worker.surname}')
-
-    def get_total_income():
-        print(f'Полный доход: {Worker._income[0] + Worker._income[1]}')
-
-f_name = input(f'Введите имя: ')
-f_surname = input(f'Введите фамилию: ')
-pos = input(f'Введите должность: ')
-f_dict = []
-f_dict.append(int(input(f'Введите оклад: ')))
-f_dict.append(int(input(f'Введите премию: ')))
-worker = Worker(f_name, f_surname, pos, f_dict)
-Position.get_full_name()
-Position.get_total_income()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# class Worker:
+#     name: str
+#     surname: str
+#     position: str
+#     _income: list
 #
+#     def __init__(self, name, surname, position, income):
+#         Worker.name = name
+#         Worker.surname = surname
+#         Worker.position = position
+#         Worker._income = income
+#         #print(self.name, self.surname, self.position, self._income)
 #
+# class Position(Worker):
+#     def get_full_name():
+#         print(f'Полное имя: {Worker.name} {Worker.surname}')
+#
+#     def get_total_income():
+#         print(f'Полный доход: {Worker._income[0] + Worker._income[1]}')
+#
+# f_name = input(f'Введите имя: ')
+# f_surname = input(f'Введите фамилию: ')
+# pos = input(f'Введите должность: ')
+# f_dict = []
+# f_dict.append(int(input(f'Введите оклад: ')))
+# f_dict.append(int(input(f'Введите премию: ')))
+# worker = Worker(f_name, f_surname, pos, f_dict)
+# Position.get_full_name()
+# Position.get_total_income()
 #
 # 4.Реализуйте базовый класс Car. У данного класса должны быть следующие атрибуты: speed, color, name, is_police (булево).
 # А также методы: go, stop, turn(direction), которые должны сообщать, что машина поехала, остановилась, повернула (куда).
@@ -117,6 +95,86 @@ Position.get_total_income()
 # Добавьте в базовый класс метод show_speed, который должен показывать текущую скорость автомобиля.
 # Для классов TownCar и WorkCar переопределите метод show_speed.
 # При значении скорости свыше 60 (TownCar) и 40 (WorkCar) должно выводиться сообщение о превышении скорости.
+class Car:
+    speed: int
+    color: str
+    name: str
+    is_police: bool
+
+    def __init__(self, speed, color, name, is_police):
+        Car.speed = speed
+        Car.color = color
+        Car.name = name
+        Car.is_police = is_police
+
+    def go():
+        print(f'Машина поехала')
+
+    def stop():
+        print(f'Машина остановилась')
+
+    def turn(direction):
+        print(f'Машина поворачивает {direction}')
+
+    def show_speed():
+        print(f'Текущая скорость {Car.speed}')
+
+
+class TownCar(Car):
+    def show_speed():
+        if Car.speed > 60:
+            print(f'{TownCar}Превышение скорости')
+
+
+class SportCar(Car):
+    def show_def():
+        print(f'Это спортивная машина')
+
+
+class WorkCar(Car):
+    def show_speed():
+        if Car.speed > 40:
+            print(f'{WorkCar}Превышение скорости')
+
+
+class PoliceCar(Car):
+    def show_def():
+        if Car.is_police is True:
+            print(f'Это полицейская машина')
+
+car = Car(61, "Red", "Lada", True)
+Car.go()
+Car.stop()
+Car.turn("Налево")
+Car.show_speed()
+TownCar.show_speed()
+SportCar.show_def()
+WorkCar.show_speed()
+PoliceCar.show_def()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #
 #
 #
