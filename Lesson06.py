@@ -95,95 +95,107 @@
 # Добавьте в базовый класс метод show_speed, который должен показывать текущую скорость автомобиля.
 # Для классов TownCar и WorkCar переопределите метод show_speed.
 # При значении скорости свыше 60 (TownCar) и 40 (WorkCar) должно выводиться сообщение о превышении скорости.
-class Car:
-    speed: int
-    color: str
-    name: str
-    is_police: bool
-
-    def __init__(self, speed, color, name, is_police):
-        Car.speed = speed
-        Car.color = color
-        Car.name = name
-        Car.is_police = is_police
-
-    def go():
-        print(f'Машина поехала')
-
-    def stop():
-        print(f'Машина остановилась')
-
-    def turn(direction):
-        print(f'Машина поворачивает {direction}')
-
-    def show_speed():
-        print(f'Текущая скорость {Car.speed}')
-
-
-class TownCar(Car):
-    def show_speed():
-        if Car.speed > 60:
-            print(f'{TownCar}Превышение скорости')
-
-
-class SportCar(Car):
-    def show_def():
-        print(f'Это спортивная машина')
-
-
-class WorkCar(Car):
-    def show_speed():
-        if Car.speed > 40:
-            print(f'{WorkCar}Превышение скорости')
-
-
-class PoliceCar(Car):
-    def show_def():
-        if Car.is_police is True:
-            print(f'Это полицейская машина')
-
-car = Car(61, "Red", "Lada", True)
-Car.go()
-Car.stop()
-Car.turn("Налево")
-Car.show_speed()
-TownCar.show_speed()
-SportCar.show_def()
-WorkCar.show_speed()
-PoliceCar.show_def()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# class Car:
+#     speed: int
+#     color: str
+#     name: str
+#     is_police: bool
+#
+#     def __init__(self, speed, color, name, is_police):
+#         Car.speed = speed
+#         Car.color = color
+#         Car.name = name
+#         Car.is_police = is_police
+#
+#     def go():
+#         print(f'Машина поехала')
+#
+#     def stop():
+#         print(f'Машина остановилась')
+#
+#     def turn(direction):
+#         print(f'Машина поворачивает {direction}')
+#
+#     def show_speed():
+#         print(f'Текущая скорость {Car.speed}')
 #
 #
+# class TownCar(Car):
+#     def show_speed():
+#         if Car.speed > 60:
+#             print(f'{TownCar}Превышение скорости')
+#
+#
+# class SportCar(Car):
+#     def show_def():
+#         print(f'Это спортивная машина')
+#
+#
+# class WorkCar(Car):
+#     def show_speed():
+#         if Car.speed > 40:
+#             print(f'{WorkCar}Превышение скорости')
+#
+#
+# class PoliceCar(Car):
+#     def show_def():
+#         if Car.is_police is True:
+#             print(f'Это полицейская машина')
+#
+# car = Car(61, "Red", "Lada", True)
+# Car.go()
+# Car.stop()
+# Car.turn("Налево")
+# Car.show_speed()
+# TownCar.show_speed()
+# SportCar.show_def()
+# WorkCar.show_speed()
+# PoliceCar.show_def()
 #
 # 5. Создайте экземпляры классов, передайте значения атрибутов. Выполните доступ к атрибутам, выведите результат.
 # Выполните вызов методов и также покажите результат.
+# class Car:
+#     color: str
+#     brand: str
+#     model: str
+#     max_speed: int
 #
+#     def __init__(self, color, brand, model, max_speed):
+#         Car.color = color
+#         Car.brand = brand
+#         Car.model = model
+#         Car.max_speed = max_speed
 #
+#     def info():
+#         print(f'Получение информации через доступ к методу-> Производитель:{Car.brand}, Модель:{Car.model}, Макс.скорость:{Car.max_speed}км\ч, Цвет кузова:{Car.color}')
+#
+# Car("Red", "Lincoln", "Town Car", 175)
+# print(f'Получение информации через доступ к атрибутам-> Производитель:{Car.brand}, Модель:{Car.model}, Макс.скорость:{Car.max_speed}км\ч, Цвет кузова:{Car.color}')
+# Car.info()
+# Car("Black", "Ford", "Crown Victoria", 200)
+# print(f'Получение информации через доступ к атрибутам-> Производитель:{Car.brand}, Модель:{Car.model}, Макс.скорость:{Car.max_speed}км\ч, Цвет кузова:{Car.color}')
+# Car.info()
 #
 # 6. Реализовать класс Stationery (канцелярская принадлежность). Определить в нем атрибут title (название) и метод draw (отрисовка).
 # Метод выводит сообщение “Запуск отрисовки.” Создать три дочерних класса Pen (ручка), Pencil (карандаш), Handle (маркер).
 # В каждом из классов реализовать переопределение метода draw. Для каждого из классов метод должен выводить уникальное сообщение.
 # Создать экземпляры классов и проверить, что выведет описанный метод для каждого экземпляра.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
