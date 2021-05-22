@@ -180,22 +180,33 @@
 # Метод выводит сообщение “Запуск отрисовки.” Создать три дочерних класса Pen (ручка), Pencil (карандаш), Handle (маркер).
 # В каждом из классов реализовать переопределение метода draw. Для каждого из классов метод должен выводить уникальное сообщение.
 # Создать экземпляры классов и проверить, что выведет описанный метод для каждого экземпляра.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# class Stationery:
+#     title: str
+#
+#     def draw(title):
+#         Stationery.title = title
+#         print(f'Запуск отрисовки')
+#
+#
+# class Pen(Stationery):
+#     def draw():
+#         if Stationery.title == "Ручка":
+#             print(f'Запуск отрисовки ручкой')
+#
+#
+# class Pencil(Stationery):
+#     def draw():
+#         if Stationery.title == "Карандаш":
+#             print(f'Запуск отрисовки карандашом')
+#
+#
+# class Handle(Stationery):
+#     def draw():
+#         if Stationery.title == "Маркер":
+#             print(f'Запуск отрисовки маркером')
+#
+#
+# Stationery.draw("Маркер")
+# Pen.draw()
+# Pencil.draw()
+# Handle.draw()
