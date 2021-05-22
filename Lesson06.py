@@ -59,8 +59,35 @@
 # В классе Position реализовать методы получения полного имени сотрудника (get_full_name) и дохода с учетом премии (get_total_income).
 # Проверить работу примера на реальных данных (создать экземпляры класса Position, передать данные,
 # проверить значения атрибутов, вызвать методы экземпляров).
+class Worker:
+    name: str
+    surname: str
+    position: str
+    _income: list
 
+    def __init__(self, name, surname, position, income):
+        Worker.name = name
+        Worker.surname = surname
+        Worker.position = position
+        Worker._income = income
+        #print(self.name, self.surname, self.position, self._income)
 
+class Position(Worker):
+    def get_full_name():
+        print(f'Полное имя: {Worker.name} {Worker.surname}')
+
+    def get_total_income():
+        print(f'Полный доход: {Worker._income[0] + Worker._income[1]}')
+
+f_name = input(f'Введите имя: ')
+f_surname = input(f'Введите фамилию: ')
+pos = input(f'Введите должность: ')
+f_dict = []
+f_dict.append(int(input(f'Введите оклад: ')))
+f_dict.append(int(input(f'Введите премию: ')))
+worker = Worker(f_name, f_surname, pos, f_dict)
+Position.get_full_name()
+Position.get_total_income()
 
 
 
