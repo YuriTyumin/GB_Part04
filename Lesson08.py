@@ -98,6 +98,35 @@
 # Эти классы — конкретные типы оргтехники (принтер, сканер, ксерокс).
 # В базовом классе определить параметры, общие для приведенных типов.
 # В классах-наследниках реализовать параметры, уникальные для каждого типа оргтехники.
+class Store:
+    def __init__(self, storage_places: int):
+        self.storage_places = storage_places
+        
+
+
+class Technics:
+    def __init__(self, price: int, brand: str, weight: int, format: str):
+        self.price = price
+        self.brand = brand
+        self.weight = weight
+        self.format = format
+
+
+class Printer(Technics):
+    def __init__(self, max_print_resolution: str, print_speed: str):
+        self.max_print_resolution = max_print_resolution
+        self.print_speed = print_speed
+
+
+class Scaner(Technics):
+    def __init__(self, max_scan_resolution: str):
+        self.max_scan_resolution = max_scan_resolution
+
+
+class AllInOne(Technics):
+    def __init__(self, copy_speed: int):
+        self.copy_speed = copy_speed
+
 
 
 
